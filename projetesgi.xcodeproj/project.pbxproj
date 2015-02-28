@@ -10,11 +10,16 @@
 		EF376C4F1AA12F1500832A0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C4E1AA12F1500832A0D /* main.m */; };
 		EF376C521AA12F1500832A0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C511AA12F1500832A0D /* AppDelegate.m */; };
 		EF376C551AA12F1500832A0D /* projetesgi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF376C531AA12F1500832A0D /* projetesgi.xcdatamodeld */; };
-		EF376C581AA12F1500832A0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C571AA12F1500832A0D /* ViewController.m */; };
 		EF376C5B1AA12F1500832A0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF376C591AA12F1500832A0D /* Main.storyboard */; };
 		EF376C5D1AA12F1500832A0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF376C5C1AA12F1500832A0D /* Images.xcassets */; };
 		EF376C601AA12F1500832A0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF376C5E1AA12F1500832A0D /* LaunchScreen.xib */; };
 		EF376C6C1AA12F1500832A0D /* projetesgiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C6B1AA12F1500832A0D /* projetesgiTests.m */; };
+		EF376C801AA1325200832A0D /* TodoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C7F1AA1325200832A0D /* TodoListViewController.m */; };
+		EF376C891AA1C08300832A0D /* TodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C881AA1C08300832A0D /* TodoDetailViewController.m */; };
+		EF376C8E1AA1C19200832A0D /* UiTextField+Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C8D1AA1C19200832A0D /* UiTextField+Geometry.m */; };
+		EFA66EE71AA1EBE600553018 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EE61AA1EBE600553018 /* ProjectViewController.m */; };
+		EFA66EF31AA2333800553018 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF21AA2333800553018 /* Todo.m */; };
+		EFA66EF61AA2335800553018 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF51AA2335800553018 /* Project.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,14 +39,24 @@
 		EF376C501AA12F1500832A0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF376C511AA12F1500832A0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EF376C541AA12F1500832A0D /* projetesgi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = projetesgi.xcdatamodel; sourceTree = "<group>"; };
-		EF376C561AA12F1500832A0D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF376C571AA12F1500832A0D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EF376C5A1AA12F1500832A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF376C5C1AA12F1500832A0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EF376C5F1AA12F1500832A0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EF376C651AA12F1500832A0D /* projetesgiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = projetesgiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF376C6A1AA12F1500832A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF376C6B1AA12F1500832A0D /* projetesgiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = projetesgiTests.m; sourceTree = "<group>"; };
+		EF376C7E1AA1325200832A0D /* TodoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoListViewController.h; sourceTree = "<group>"; };
+		EF376C7F1AA1325200832A0D /* TodoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoListViewController.m; sourceTree = "<group>"; };
+		EF376C871AA1C08300832A0D /* TodoDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoDetailViewController.h; sourceTree = "<group>"; };
+		EF376C881AA1C08300832A0D /* TodoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailViewController.m; sourceTree = "<group>"; };
+		EF376C8C1AA1C19200832A0D /* UiTextField+Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UiTextField+Geometry.h"; sourceTree = "<group>"; };
+		EF376C8D1AA1C19200832A0D /* UiTextField+Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UiTextField+Geometry.m"; sourceTree = "<group>"; };
+		EFA66EE51AA1EBE600553018 /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
+		EFA66EE61AA1EBE600553018 /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
+		EFA66EF11AA2333800553018 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		EFA66EF21AA2333800553018 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		EFA66EF41AA2335800553018 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
+		EFA66EF51AA2335800553018 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +98,14 @@
 		EF376C4B1AA12F1500832A0D /* projetesgi */ = {
 			isa = PBXGroup;
 			children = (
+				EF376C751AA1315700832A0D /* Model */,
 				EF376C501AA12F1500832A0D /* AppDelegate.h */,
 				EF376C511AA12F1500832A0D /* AppDelegate.m */,
-				EF376C561AA12F1500832A0D /* ViewController.h */,
-				EF376C571AA12F1500832A0D /* ViewController.m */,
+				EF376C7A1AA1320900832A0D /* controllers */,
 				EF376C591AA12F1500832A0D /* Main.storyboard */,
+				EF376C8A1AA1C11300832A0D /* Interfaces */,
 				EF376C5C1AA12F1500832A0D /* Images.xcassets */,
 				EF376C5E1AA12F1500832A0D /* LaunchScreen.xib */,
-				EF376C531AA12F1500832A0D /* projetesgi.xcdatamodeld */,
 				EF376C4C1AA12F1500832A0D /* Supporting Files */,
 			);
 			path = projetesgi;
@@ -120,6 +135,48 @@
 				EF376C6A1AA12F1500832A0D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF376C751AA1315700832A0D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF376C531AA12F1500832A0D /* projetesgi.xcdatamodeld */,
+				EFA66EF41AA2335800553018 /* Project.h */,
+				EFA66EF51AA2335800553018 /* Project.m */,
+				EFA66EF11AA2333800553018 /* Todo.h */,
+				EFA66EF21AA2333800553018 /* Todo.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EF376C7A1AA1320900832A0D /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EF376C7E1AA1325200832A0D /* TodoListViewController.h */,
+				EF376C7F1AA1325200832A0D /* TodoListViewController.m */,
+				EF376C871AA1C08300832A0D /* TodoDetailViewController.h */,
+				EF376C881AA1C08300832A0D /* TodoDetailViewController.m */,
+				EFA66EE51AA1EBE600553018 /* ProjectViewController.h */,
+				EFA66EE61AA1EBE600553018 /* ProjectViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		EF376C8A1AA1C11300832A0D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				EF376C8B1AA1C12100832A0D /* UiTextField */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		EF376C8B1AA1C12100832A0D /* UiTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EF376C8C1AA1C19200832A0D /* UiTextField+Geometry.h */,
+				EF376C8D1AA1C19200832A0D /* UiTextField+Geometry.m */,
+			);
+			name = UiTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,9 +279,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA66EE71AA1EBE600553018 /* ProjectViewController.m in Sources */,
+				EF376C891AA1C08300832A0D /* TodoDetailViewController.m in Sources */,
+				EF376C801AA1325200832A0D /* TodoListViewController.m in Sources */,
+				EFA66EF61AA2335800553018 /* Project.m in Sources */,
 				EF376C521AA12F1500832A0D /* AppDelegate.m in Sources */,
 				EF376C4F1AA12F1500832A0D /* main.m in Sources */,
-				EF376C581AA12F1500832A0D /* ViewController.m in Sources */,
+				EF376C8E1AA1C19200832A0D /* UiTextField+Geometry.m in Sources */,
+				EFA66EF31AA2333800553018 /* Todo.m in Sources */,
 				EF376C551AA12F1500832A0D /* projetesgi.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +478,7 @@
 				EF376C711AA12F1500832A0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF376C721AA12F1500832A0D /* Build configuration list for PBXNativeTarget "projetesgiTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +487,7 @@
 				EF376C741AA12F1500832A0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
