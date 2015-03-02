@@ -172,12 +172,34 @@
  
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return YES;
+    
+}
 
 
+
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        //remove the deleted object from your data source.
+        
+        //If your data source is an NSMutableArray, do this
+        
+        [self.todos removeObjectAtIndex:indexPath.row];
+        
+        [tableView reloadData]; // tell table to refresh now
+        
+    }
+}
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
      self.selectedTodo = self.todos[indexPath.row];
-    [self performSegueWithIdentifier:SEGUE_TO_PROJECT_ID sender:self];
+    [self performSegueWithIdentifier:SEGUE_TO_PROJECT_ID sender:self.selectedTodo];
     
   
     

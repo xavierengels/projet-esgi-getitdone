@@ -20,6 +20,7 @@
 		EFA66EE71AA1EBE600553018 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EE61AA1EBE600553018 /* ProjectViewController.m */; };
 		EFA66EF31AA2333800553018 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF21AA2333800553018 /* Todo.m */; };
 		EFA66EF61AA2335800553018 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF51AA2335800553018 /* Project.m */; };
+		EFED563E1AA299410093E667 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED563D1AA299410093E667 /* ProjectDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		EFA66EF21AA2333800553018 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		EFA66EF41AA2335800553018 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		EFA66EF51AA2335800553018 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
+		EFED563C1AA299410093E667 /* ProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailViewController.h; sourceTree = "<group>"; };
+		EFED563D1AA299410093E667 /* ProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +161,8 @@
 				EF376C881AA1C08300832A0D /* TodoDetailViewController.m */,
 				EFA66EE51AA1EBE600553018 /* ProjectViewController.h */,
 				EFA66EE61AA1EBE600553018 /* ProjectViewController.m */,
+				EFED563C1AA299410093E667 /* ProjectDetailViewController.h */,
+				EFED563D1AA299410093E667 /* ProjectDetailViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				EF376C8E1AA1C19200832A0D /* UiTextField+Geometry.m in Sources */,
 				EFA66EF31AA2333800553018 /* Todo.m in Sources */,
 				EF376C551AA12F1500832A0D /* projetesgi.xcdatamodeld in Sources */,
+				EFED563E1AA299410093E667 /* ProjectDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

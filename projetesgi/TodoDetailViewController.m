@@ -6,13 +6,16 @@
 {
     NSArray *_pickerData;
     NSMutableArray *array1;
+    NSUInteger *selectRow;
 }
 @property (weak, nonatomic) IBOutlet UISwitch *switchDone;
 @property (weak, nonatomic) IBOutlet UITextField *fieldName;
 @property (weak, nonatomic) IBOutlet UITextView *txtDetails;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpDueDate;
+@property (weak, nonatomic) IBOutlet UITextField *textSelect;
 
+@property (strong, nonatomic) Project *selectedProject;
 - (void)setupFromModel;
 - (void)updateModelFromOutlets;
 @end
@@ -25,7 +28,7 @@
     self.dateFormatter = [NSDateFormatter new];
     self.dateFormatter.dateFormat = @"dd/MM/YYYY";
     [self setupFromModel];
-    
+    self.textSelect.delegate = self;
     
     // Connect data
   
@@ -42,11 +45,12 @@
     
     _usernames = [moc executeFetchRequest:request error:nil];
     
-    NSLog (@"names: %@",_usernames);
+  //  NSLog (@"names: %@",_usernames);
  
  
     self.picker.dataSource = self;
     self.picker.delegate = self;
+  
 }
 
 - (void)didReceiveMemoryWarning {
@@ -69,6 +73,18 @@
 - (IBAction)updateAction:(id)sender {
     [self updateModelFromOutlets];
     [self.navigationController popViewControllerAnimated:YES];
+    NSUInteger num = [[self.pickerView dataSource] numberOfComponentsInPickerView:self.pickerView];
+    NSMutableString *text = [NSMutableString string];
+    for(NSUInteger i =0;i<num;++i)
+    {
+        NSUInteger selectRow = [self.pickerView selectedRowInComponent:i];
+        NSString *ww = [[self.pickerView delegate] pickerView:self.pickerView titleForRow:selectRow forComponent:i];
+        [text appendFormat:@"%@",ww];
+        NSLog(@"%@",text);
+        //self.todo.relationship = [NSSet setWithObject:ww];
+    }
+    NSMutableSet *items = [self.todo.relationship mutableSetValueForKey:text];
+    [items addObject:self.todo.relationship];
 }
 
 #pragma mark - Privates
@@ -78,7 +94,7 @@
     self.fieldName.text  = self.todo.name;
     self.txtDetails.Text = self.todo.details;
     self.dpDueDate.date = [self.dateFormatter dateFromString:self.todo.dueDate];
-   
+   // self.pickerView.textInputContextIdentifier=self.todo.rela
 }
 
 - (void)updateModelFromOutlets{
@@ -87,6 +103,8 @@
     self.todo.name = self.fieldName.text;
     self.todo.details = self.txtDetails.text;
     self.todo.dueDate = [self.dateFormatter stringFromDate:self.dpDueDate.date];
+    
+  
    
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -106,4 +124,12 @@
     //set item per row
    return _usernames[row][@"nameP"];
 }
+- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
+{
+
+   // NSLog(@"Selected Row %@", [self.usernames objectAtIndex:row]);
+    selectRow= row;
+
+}
+
 @end
