@@ -11,7 +11,6 @@
 @property (weak, nonatomic) IBOutlet UISwitch *switchDone;
 @property (weak, nonatomic) IBOutlet UITextField *fieldName;
 @property (weak, nonatomic) IBOutlet UITextView *txtDetails;
-@property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpDueDate;
 @property (weak, nonatomic) IBOutlet UITextField *textSelect;
 
@@ -73,18 +72,14 @@
 - (IBAction)updateAction:(id)sender {
     [self updateModelFromOutlets];
     [self.navigationController popViewControllerAnimated:YES];
-    NSUInteger num = [[self.pickerView dataSource] numberOfComponentsInPickerView:self.pickerView];
-    NSMutableString *text = [NSMutableString string];
-    for(NSUInteger i =0;i<num;++i)
-    {
-        NSUInteger selectRow = [self.pickerView selectedRowInComponent:i];
-        NSString *ww = [[self.pickerView delegate] pickerView:self.pickerView titleForRow:selectRow forComponent:i];
-        [text appendFormat:@"%@",ww];
-        NSLog(@"%@",text);
-        //self.todo.relationship = [NSSet setWithObject:ww];
+    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *moc = ad.managedObjectContext;
+    NSError *error;
+    if (![moc save:&error]) {
+        // Something's gone seriously wrong
+        NSLog(@"Error saving new color: %@", [error localizedDescription]);
     }
-    NSMutableSet *items = [self.todo.relationship mutableSetValueForKey:text];
-    [items addObject:self.todo.relationship];
+
 }
 
 #pragma mark - Privates
