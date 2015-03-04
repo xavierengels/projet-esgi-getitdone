@@ -1,0 +1,57 @@
+
+/* Class = "IBUILabel"; text = "Done"; ObjectID = "A3P-R8-Nrr"; */
+"A3P-R8-Nrr.text" = "Done";
+
+/* Class = "IBUILabel"; text = "Choisir une tâche"; ObjectID = "BaE-zO-fV5"; */
+"BaE-zO-fV5.text" = "Choisir une tâche";
+
+/* Class = "IBUILabel"; text = "Detail"; ObjectID = "Btb-qd-WVl"; */
+"Btb-qd-WVl.text" = "Detail";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "HGA-sL-ZqV"; */
+"HGA-sL-ZqV.text" = "Title";
+
+/* Class = "IBUILabel"; text = " Name"; ObjectID = "Lhg-gY-xFG"; */
+"Lhg-gY-xFG.text" = " Name";
+
+/* Class = "IBUIButton"; normalTitle = "Tâches"; ObjectID = "RfH-DS-9z1"; */
+"RfH-DS-9z1.normalTitle" = "Tâches";
+
+/* Class = "IBUITextField"; text = "texfield"; ObjectID = "SMF-bj-H3A"; */
+"SMF-bj-H3A.text" = "texfield";
+
+/* Class = "IBUILabel"; text = " Name"; ObjectID = "V2P-ih-wpd"; */
+"V2P-ih-wpd.text" = " Name";
+
+/* Class = "IBUITextField"; text = "texfield"; ObjectID = "X3R-6q-nU1"; */
+"X3R-6q-nU1.text" = "texfield";
+
+/* Class = "IBUITextView"; text = "textview"; ObjectID = "XPZ-9N-y04"; */
+"XPZ-9N-y04.text" = "textview";
+
+/* Class = "IBUILabel"; text = "Done"; ObjectID = "Zgb-N3-9D3"; */
+"Zgb-N3-9D3.text" = "Done";
+
+/* Class = "IBUILabel"; text = " Details"; ObjectID = "ehJ-7s-ln1"; */
+"ehJ-7s-ln1.text" = " Details";
+
+/* Class = "IBUIBarButtonItem"; title = "Update"; ObjectID = "fsz-5v-GEe"; */
+"fsz-5v-GEe.title" = "Update";
+
+/* Class = "IBUITextView"; text = "textview"; ObjectID = "gT7-iJ-0Gl"; */
+"gT7-iJ-0Gl.text" = "textview";
+
+/* Class = "IBUIButton"; normalTitle = "Edit"; ObjectID = "l8p-gd-ZNr"; */
+"l8p-gd-ZNr.normalTitle" = "Edit";
+
+/* Class = "IBUILabel"; text = " Due Date"; ObjectID = "loO-8o-70j"; */
+"loO-8o-70j.text" = " Due Date";
+
+/* Class = "IBUILabel"; text = " Due Date"; ObjectID = "oOV-T6-r0u"; */
+"oOV-T6-r0u.text" = " Due Date";
+
+/* Class = "IBUILabel"; text = " Details"; ObjectID = "oYw-Ob-m0H"; */
+"oYw-Ob-m0H.text" = " Details";
+
+/* Class = "IBUIBarButtonItem"; title = "Update"; ObjectID = "stJ-1i-c51"; */
+"stJ-1i-c51.title" = "Update";

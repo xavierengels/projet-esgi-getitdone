@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E23219711AA7BACD0051FB2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EF376C491AA12F1500832A0D /* projetesgi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetesgi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF376C4D1AA12F1500832A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF376C4E1AA12F1500832A0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -326,6 +327,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EF376C5A1AA12F1500832A0D /* Base */,
+				E23219711AA7BACD0051FB2E /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
