@@ -6,23 +6,24 @@
 //
 //
 
-#import "ProjectViewController.h"
-#define PROJECT_CELL_ID        @"ProjectCellIdentifier"
+#import "TaskListViewController.h"
+#define PROJECT_CELL_ID        @"TaskCellIdentifier"
 #import "AppDelegate.h"
 #import "Project.h"
 #import "TodoListViewController.h"
-@interface ProjectViewController ()
+#define SEGUE_TO_TASK_ID  @"ListToEditTask"
+@interface TaskListViewController ()
 @property (strong, nonatomic) Project *selectedProject;
 @end
 
-@implementation ProjectViewController
+@implementation TaskListViewController
 
 - (void)setupModel{
-    self.projects = [@[] mutableCopy];
+    self.tasks = [@[] mutableCopy];
 }
 - (void)configureOutlets{
-    self.tableProject.delegate = self;
-    self.tableProject.dataSource = self;
+    self.tableTask.delegate = self;
+    self.tableTask.dataSource = self;
     
     
 }
@@ -42,8 +43,8 @@
      [request setSortDescriptors:sortDescriptors];*/
     // Fetch the records and handle an error
     NSError *error;
-    self.projects = [[moc executeFetchRequest:request error:&error] mutableCopy];
-    if (!self.projects) {
+    self.tasks = [[moc executeFetchRequest:request error:&error] mutableCopy];
+    if (!self.tasks) {
         // This is a serious error
         // Handle accordingly
         NSLog(@"Failed to load colors from disk");
@@ -52,19 +53,20 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    [self.tableProject reloadData];
+    [self.tableTask reloadData];
 }
 
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-   /* if([[segue identifier] isEqualToString:@"SEGUE_TO_PROJECT_ID"])
+    if([[segue identifier] isEqualToString:@"SEGUE_TO_TASK_ID"])
     {
         TodoListViewController *controller=(TodoListViewController *)segue.destinationViewController;
-     
-        //Or rather just save the indexPath in a property in your currentViewController when you get the accessoryButtonTappedForRowAtIndexPath callback, and use it here
+        
+       
         controller.project = self.selectedProject;
-    }*/
+        
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,7 +75,7 @@
 
 - (IBAction)didTouchAddButton:(id)sender {
     
-    if ([self.fieldProject.text isEqualToString:@""])
+    if ([self.fieldTask.text isEqualToString:@""])
         return;
     
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -82,46 +84,47 @@
     
     Project *newProject = [NSEntityDescription insertNewObjectForEntityForName:@"Project" inManagedObjectContext:moc];
     
-    newProject.nameP = self.fieldProject.text;
+    newProject.nameP = self.fieldTask.text;
     NSError *error;
     if (![moc save:&error]) {
         // Something's gone seriously wrong
         NSLog(@"Error saving new color: %@", [error localizedDescription]);
     }
-    [self.projects addObject:newProject];
-    [self.fieldProject setText:@""];
+    [self.tasks addObject:newProject];
+    [self.fieldTask setText:@""];
     [moc save:nil];
-    [self.tableProject reloadData];
-
-  
-
+    [self.tableTask reloadData];
+    
+    
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.projects.count;
+    return self.tasks.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [self.tableProject dequeueReusableCellWithIdentifier:PROJECT_CELL_ID];
+    UITableViewCell *cell = [self.tableTask dequeueReusableCellWithIdentifier:PROJECT_CELL_ID];
     
-        
-        Project *currentProject = self.projects[indexPath.row];
-        cell.textLabel.text = currentProject.nameP;
-        return cell;
-
+    
+    Project *currentProject = self.tasks[indexPath.row];
+    cell.textLabel.text = currentProject.nameP;
+    return cell;
+    
 }
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-      UITableViewCell *cell = [self.tableProject dequeueReusableCellWithIdentifier:PROJECT_CELL_ID];
+    UITableViewCell *cell = [self.tableTask dequeueReusableCellWithIdentifier:PROJECT_CELL_ID];
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = ad.managedObjectContext;
-  
-    self.selectedProject = self.projects[indexPath.row];
- 
- 
+    
+    self.selectedProject = self.tasks[indexPath.row];
+
+  //  [self performSegueWithIdentifier:SEGUE_TO_PROJECT_ID sender:self.selectedProject];
+    
 }
 /*
  #pragma mark - Navigation

@@ -17,6 +17,7 @@
 		EF376C801AA1325200832A0D /* TodoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C7F1AA1325200832A0D /* TodoListViewController.m */; };
 		EF376C891AA1C08300832A0D /* TodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C881AA1C08300832A0D /* TodoDetailViewController.m */; };
 		EF376C8E1AA1C19200832A0D /* UiTextField+Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C8D1AA1C19200832A0D /* UiTextField+Geometry.m */; };
+		EF6E5F551AA7A9BF00D811EC /* TaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E5F541AA7A9BF00D811EC /* TaskListViewController.m */; };
 		EFA66EE71AA1EBE600553018 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EE61AA1EBE600553018 /* ProjectViewController.m */; };
 		EFA66EF31AA2333800553018 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF21AA2333800553018 /* Todo.m */; };
 		EFA66EF61AA2335800553018 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF51AA2335800553018 /* Project.m */; };
@@ -52,6 +53,8 @@
 		EF376C881AA1C08300832A0D /* TodoDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoDetailViewController.m; sourceTree = "<group>"; };
 		EF376C8C1AA1C19200832A0D /* UiTextField+Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UiTextField+Geometry.h"; sourceTree = "<group>"; };
 		EF376C8D1AA1C19200832A0D /* UiTextField+Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UiTextField+Geometry.m"; sourceTree = "<group>"; };
+		EF6E5F531AA7A9BF00D811EC /* TaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListViewController.h; sourceTree = "<group>"; };
+		EF6E5F541AA7A9BF00D811EC /* TaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListViewController.m; sourceTree = "<group>"; };
 		EFA66EE51AA1EBE600553018 /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
 		EFA66EE61AA1EBE600553018 /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
 		EFA66EF11AA2333800553018 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				EFA66EE61AA1EBE600553018 /* ProjectViewController.m */,
 				EFED563C1AA299410093E667 /* ProjectDetailViewController.h */,
 				EFED563D1AA299410093E667 /* ProjectDetailViewController.m */,
+				EF6E5F531AA7A9BF00D811EC /* TaskListViewController.h */,
+				EF6E5F541AA7A9BF00D811EC /* TaskListViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				EF376C891AA1C08300832A0D /* TodoDetailViewController.m in Sources */,
 				EF376C801AA1325200832A0D /* TodoListViewController.m in Sources */,
 				EFA66EF61AA2335800553018 /* Project.m in Sources */,
+				EF6E5F551AA7A9BF00D811EC /* TaskListViewController.m in Sources */,
 				EF376C521AA12F1500832A0D /* AppDelegate.m in Sources */,
 				EF376C4F1AA12F1500832A0D /* main.m in Sources */,
 				EF376C8E1AA1C19200832A0D /* UiTextField+Geometry.m in Sources */,
