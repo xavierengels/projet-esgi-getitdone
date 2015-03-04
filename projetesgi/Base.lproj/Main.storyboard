@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Gsl-zB-TGJ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="0.46365812452721988" green="0.74723800510000005" blue="0.42191880632317685" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egY-IW-xtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="481"/>
+            <point key="canvasLocation" x="-189" y="606"/>
         </scene>
         <!--Todo Detail View Controller-->
         <scene sceneID="De0-XA-g34">
@@ -289,7 +289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcL-q0-jIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="249" y="-255"/>
+            <point key="canvasLocation" x="333" y="-463"/>
         </scene>
         <!--Task List View Controller-->
         <scene sceneID="LWA-T2-OgO">
