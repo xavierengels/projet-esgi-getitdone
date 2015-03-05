@@ -13,6 +13,6 @@
 @interface TaskDetailViewController : UIViewController
 @property (nonatomic, strong) NSArray *usernames;
 @property (weak, nonatomic) IBOutlet UIPickerView *picker;
-@property (strong, nonatomic) Project *project;
+@property (strong, nonatomic) Project *task;
 
 @end

@@ -58,8 +58,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)setProject:(Project *)project{
-    _project = project;
+- (void)setTask:(Project *)task{
+    _task = task;
     
     [self setupFromModel];
 }
@@ -80,15 +80,15 @@
 }
 - (void)setupFromModel{
     
-    self.fieldName.text  = self.project.nameP;
+    self.fieldName.text  = self.task.nameP;
     //self.picker = self.project.identifierP;
   
 }
 
 - (void)updateModelFromOutlets{
-    self.project.nameP = self.fieldName.text;
-  self.project.identifierP = selectRow;
-      NSLog(self.project.identifierP);
+    self.task.nameP = self.fieldName.text;
+  self.task.identifierP = selectRow;
+      NSLog(self.task.identifierP);
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
    

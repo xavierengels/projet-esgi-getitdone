@@ -37,21 +37,14 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Project" inManagedObjectContext:moc];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
-    
-    /*    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-     [request setSortDescriptors:sortDescriptors];*/
-    // Fetch the records and handle an error
+
     NSError *error;
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"identifierP == %@", _project.name];
     [request setPredicate:predicate];
     self.projects = [[moc executeFetchRequest:request error:&error] mutableCopy];
     NSLog(@"HAKJHFJAZHFJKAZHFJKHAZJKHFAKZFA");
     NSLog(@"%@",_project.name);
-//faire avec predicate avec project.name
-    
-                              
-  
+
   //  NSLog(@"%@",[[self.projects objectAtIndex:0]valueForKey:@"_project.name"]);
     if (!self.projects) {
         // This is a serious error
@@ -89,9 +82,9 @@
     AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *moc = ad.managedObjectContext;
     
-    
+  //
     Project *newProject = [NSEntityDescription insertNewObjectForEntityForName:@"Project" inManagedObjectContext:moc];
-    
+    newProject.identifierP=self.project.name;
     newProject.nameP = self.fieldProject.text;
     NSError *error;
     if (![moc save:&error]) {
