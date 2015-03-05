@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-@interface TaskListViewController : UIViewController
+@interface TaskListViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableTask;
 @property (strong, nonatomic) NSMutableArray *tasks;
 @property (weak, nonatomic) IBOutlet UITextField *fieldTask;
