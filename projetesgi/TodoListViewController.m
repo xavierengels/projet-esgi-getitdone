@@ -5,6 +5,7 @@
 #import "ProjectViewController.h"
 #import "Todo.h"
 
+
 #define TODO_CELL_ID        @"TodoCellIdentifier"
 #define SEGUE_TO_DETAIL_ID  @"ListToDetail"
 #define SEGUE_TO_PROJECT_ID  @"ListToProject"
@@ -55,6 +56,9 @@
         // Handle accordingly
         NSLog(@"Failed to load colors from disk");
     }
+    
+    
+  
     
 /*
     // retrieve the store URL
@@ -108,7 +112,9 @@
 
     
     Todo *newTodo = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:moc];
-   
+    
+    
+    
     newTodo.name = self.fieldTodo.text;
     newTodo.dueDate = [self.dateFormatter stringFromDate:[NSDate date]];
     newTodo.done = false;
@@ -196,9 +202,23 @@
         
         //If your data source is an NSMutableArray, do this
         
+        NSError * error = nil;
         [self.todos removeObjectAtIndex:indexPath.row];
+        NSManagedObjectContext *moc = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Todo" inManagedObjectContext:moc];
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entity];
+        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
         
-        [tableView reloadData]; // tell table to refresh now
+        [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+        
+        [request setFetchBatchSize:20];
+        NSManagedObject *matches = nil;
+        NSArray *objects = [moc executeFetchRequest:request error:&error];
+        matches=[objects objectAtIndex:([indexPath row])];
+        [moc deleteObject:matches];
+        [moc save:&error];
+        [tableView reloadData];
       
     }
 }

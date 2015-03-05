@@ -3,11 +3,16 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "Project.h"
+
+
+
 @interface TodoListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     AppDelegate *app;
     NSManagedObjectContext *context;
 }
+
+
 
 
 
@@ -17,6 +22,8 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 
 @property (strong, nonatomic) NSMutableArray *todos;
+
+@property (strong, nonatomic) NSArray *todostodelete;
 @property (strong, nonatomic) Project *project;
 @property (nonatomic) NSArray *selectedProject;
 //@property (copy) void (^blockProperty)(void);
