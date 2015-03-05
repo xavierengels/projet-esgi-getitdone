@@ -8,13 +8,14 @@
 
 #import "TaskDetailViewController.h"
 #import "UITextField+Geometry.h"
+
 @interface TaskDetailViewController ()
 {
         NSString *selectRow;
         NSUInteger intRow;
 }
 @property (weak, nonatomic) IBOutlet UITextField *fieldName;
-@property (weak, nonatomic) IBOutlet UITextView *txtDetails;
+
 - (void)setupFromModel;
 - (void)updateModelFromOutlets;
 @end
@@ -78,13 +79,13 @@
 - (void)setupFromModel{
     
     self.fieldName.text  = self.project.nameP;
-    selectRow = self.project.identifierP;
+   // selectRow = self.project.identifierP;
 
 }
 
 - (void)updateModelFromOutlets{
     self.project.nameP = self.fieldName.text;
-    self.project.identifierP = selectRow;
+//    self.project.identifierP = selectRow;
     
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {

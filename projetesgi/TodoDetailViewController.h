@@ -4,10 +4,7 @@
 #import "Todo.h"
 #import "Project.h"
 #import "AppDelegate.h"
-@protocol RolePickerTVCellDelegate
-- (void)roleWasSelectedOnPicker:(Project
-*)role;
-@end
+
 
 
 
