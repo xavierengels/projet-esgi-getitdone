@@ -18,7 +18,7 @@
 
 @property (strong, nonatomic) NSMutableArray *todos;
 @property (strong, nonatomic) Project *project;
-
+@property (nonatomic) NSArray *selectedProject;
 //@property (copy) void (^blockProperty)(void);
 @end
 

@@ -92,6 +92,10 @@
       TodoDetailViewController *controller = segue.destinationViewController;
        controller.todo = self.selectedTodo;
     }
+    if ([segue.identifier isEqualToString:SEGUE_TO_PROJECT_ID]){
+        ProjectViewController *controller = segue.destinationViewController;
+        controller.project = self.selectedTodo;
+    }
 }
 
 #pragma mark - Actions

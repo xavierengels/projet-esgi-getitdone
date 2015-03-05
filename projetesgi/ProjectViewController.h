@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSMutableArray *projects;
 @property (weak, nonatomic) IBOutlet UITextField *fieldProject;
 @property (strong, nonatomic) NSDateFormatter *dateFormatterP;
+@property (strong, nonatomic)  Todo *project;
 
 @end

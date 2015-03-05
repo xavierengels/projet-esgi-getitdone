@@ -114,6 +114,7 @@
     
     
     Project *currentProject = self.tasks[indexPath.row];
+    NSLog(@"%@",currentProject);
     cell.textLabel.text = currentProject.nameP;
     return cell;
     

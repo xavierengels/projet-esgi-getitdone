@@ -49,8 +49,7 @@
 
     self.picker.dataSource = self;
     self.picker.delegate = self;
-    // NSLog(intRow);
-   // [_picker selectRow:intRow inComponent:0 animated:NO];
+    //[_picker selectRow:intRow inComponent:0 animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -80,14 +79,14 @@
 - (void)setupFromModel{
     
     self.fieldName.text  = self.project.nameP;
-    selectRow = self.project.identifierP;
-    NSLog(self.project.identifierP);
+    //self.picker = self.project.identifierP;
+  
 }
 
 - (void)updateModelFromOutlets{
     self.project.nameP = self.fieldName.text;
   self.project.identifierP = selectRow;
-    
+      NSLog(self.project.identifierP);
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
    
@@ -110,7 +109,7 @@
     
 //     NSLog(@"Selected Row %@", [self.usernames objectAtIndex:row]);
     selectRow= _usernames[row][@"name"];
-    intRow = row;
+  //  intRow = row;
 }
 /*
 #pragma mark - Navigation

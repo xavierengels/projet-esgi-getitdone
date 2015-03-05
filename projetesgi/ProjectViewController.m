@@ -10,6 +10,7 @@
 #define PROJECT_CELL_ID        @"ProjectCellIdentifier"
 #import "AppDelegate.h"
 #import "Project.h"
+#import "Todo.h"
 #import "TodoListViewController.h"
 @interface ProjectViewController ()
 @property (strong, nonatomic) Project *selectedProject;
@@ -42,7 +43,16 @@
      [request setSortDescriptors:sortDescriptors];*/
     // Fetch the records and handle an error
     NSError *error;
+    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"identifierP like %@", _project.name];
+    [request setPredicate:predicate];
     self.projects = [[moc executeFetchRequest:request error:&error] mutableCopy];
+    NSLog(@"HAKJHFJAZHFJKAZHFJKHAZJKHFAKZFA");
+    NSLog(@"%@",_project.name);
+//faire avec predicate avec project.name
+    
+                              
+  
+  //  NSLog(@"%@",[[self.projects objectAtIndex:0]valueForKey:@"_project.name"]);
     if (!self.projects) {
         // This is a serious error
         // Handle accordingly
