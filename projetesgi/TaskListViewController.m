@@ -7,6 +7,7 @@
 //
 
 #import "TaskListViewController.h"
+#import "TaskDetailViewController.h"
 #define PROJECT_CELL_ID        @"TaskCellIdentifier"
 #import "AppDelegate.h"
 #import "Project.h"
@@ -61,14 +62,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    /*if([[segue identifier] isEqualToString:@"SEGUE_TO_TASK_ID"])
+    if([[segue identifier] isEqualToString:@"SEGUE_TO_TASK_ID"])
     {
-        TodoListViewController *controller=(TodoListViewController *)segue.destinationViewController;
         
-       
+        TaskDetailViewController *controller = segue.destinationViewController;
         controller.project = self.selectedProject;
         
-    }*/
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -119,13 +119,8 @@
 }
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [self.tableTask dequeueReusableCellWithIdentifier:PROJECT_CELL_ID];
-    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = ad.managedObjectContext;
-    
     self.selectedProject = self.tasks[indexPath.row];
-
-  //  [self performSegueWithIdentifier:SEGUE_TO_PROJECT_ID sender:self.selectedProject];
+    [self performSegueWithIdentifier:SEGUE_TO_TASK_ID sender:self.selectedProject];
     
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
