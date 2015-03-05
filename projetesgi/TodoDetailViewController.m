@@ -22,7 +22,14 @@
     [super viewDidLoad];
     self.dateFormatter = [NSDateFormatter new];
     self.dateFormatter.dateFormat = @"dd/MM/YYYY";
+    
+    
+    
+    
+  
     [self setupFromModel];
+   
+   
 
     
      
@@ -64,8 +71,12 @@
     self.switchDone.on   = self.todo.done;
     self.fieldName.text  = self.todo.name;
     self.txtDetails.Text = self.todo.details;
-    self.dpDueDate.date = [self.dateFormatter dateFromString:self.todo.dueDate];
-   // self.pickerView.textInputContextIdentifier=self.todo.rela
+    
+    
+    //self.dpDueDate.date  = (self.todo.dueDate)? self.todo.dueDate : [NSDate date];
+    //self.switchDone.on   = [self.todo.done boolValue];
+
+    //NSLog(@"Le bool recuperer %i",self.switchDone.on);
 }
 
 - (void)updateModelFromOutlets{
@@ -74,7 +85,15 @@
     self.todo.name = self.fieldName.text;
     self.todo.details = self.txtDetails.text;
     self.todo.dueDate = [self.dateFormatter stringFromDate:self.dpDueDate.date];
+
     
+    
+    NSLog(@"La valeur nouvelle %@",self.dpDueDate.date);
+    NSLog(@"La valeur actuelle %@",self.todo.dueDate);
+
+    
+ 
+
   
    
 }

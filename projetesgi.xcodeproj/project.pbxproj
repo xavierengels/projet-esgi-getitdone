@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2FE7F291AA88857008E7729 /* téléchargement.png in Resources */ = {isa = PBXBuildFile; fileRef = E2FE7F281AA88857008E7729 /* téléchargement.png */; };
+		E2FE7F2F1AA89347008E7729 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FE7F2E1AA89347008E7729 /* Todo.m */; };
 		EF376C4F1AA12F1500832A0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C4E1AA12F1500832A0D /* main.m */; };
 		EF376C521AA12F1500832A0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C511AA12F1500832A0D /* AppDelegate.m */; };
 		EF376C551AA12F1500832A0D /* projetesgi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EF376C531AA12F1500832A0D /* projetesgi.xcdatamodeld */; };
@@ -20,7 +22,6 @@
 		EF6E5F551AA7A9BF00D811EC /* TaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E5F541AA7A9BF00D811EC /* TaskListViewController.m */; };
 		EF6E5F581AA7CE4700D811EC /* TaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E5F571AA7CE4700D811EC /* TaskDetailViewController.m */; };
 		EFA66EE71AA1EBE600553018 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EE61AA1EBE600553018 /* ProjectViewController.m */; };
-		EFA66EF31AA2333800553018 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF21AA2333800553018 /* Todo.m */; };
 		EFA66EF61AA2335800553018 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF51AA2335800553018 /* Project.m */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,9 @@
 
 /* Begin PBXFileReference section */
 		E23219711AA7BACD0051FB2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		E2FE7F281AA88857008E7729 /* téléchargement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "téléchargement.png"; sourceTree = "<group>"; };
+		E2FE7F2D1AA89347008E7729 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		E2FE7F2E1AA89347008E7729 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		EF376C491AA12F1500832A0D /* projetesgi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = projetesgi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF376C4D1AA12F1500832A0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF376C4E1AA12F1500832A0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,8 +64,6 @@
 		EF6E5F571AA7CE4700D811EC /* TaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewController.m; sourceTree = "<group>"; };
 		EFA66EE51AA1EBE600553018 /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
 		EFA66EE61AA1EBE600553018 /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
-		EFA66EF11AA2333800553018 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
-		EFA66EF21AA2333800553018 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		EFA66EF41AA2335800553018 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		EFA66EF51AA2335800553018 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 		EF376C4B1AA12F1500832A0D /* projetesgi */ = {
 			isa = PBXGroup;
 			children = (
+				E2FE7F281AA88857008E7729 /* téléchargement.png */,
 				EF376C751AA1315700832A0D /* Model */,
 				EF376C501AA12F1500832A0D /* AppDelegate.h */,
 				EF376C511AA12F1500832A0D /* AppDelegate.m */,
@@ -148,10 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				EF376C531AA12F1500832A0D /* projetesgi.xcdatamodeld */,
+				E2FE7F2D1AA89347008E7729 /* Todo.h */,
+				E2FE7F2E1AA89347008E7729 /* Todo.m */,
 				EFA66EF41AA2335800553018 /* Project.h */,
 				EFA66EF51AA2335800553018 /* Project.m */,
-				EFA66EF11AA2333800553018 /* Todo.h */,
-				EFA66EF21AA2333800553018 /* Todo.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF376C5B1AA12F1500832A0D /* Main.storyboard in Resources */,
+				E2FE7F291AA88857008E7729 /* téléchargement.png in Resources */,
 				EF376C601AA12F1500832A0D /* LaunchScreen.xib in Resources */,
 				EF376C5D1AA12F1500832A0D /* Images.xcassets in Resources */,
 			);
@@ -298,9 +302,9 @@
 				EF376C521AA12F1500832A0D /* AppDelegate.m in Sources */,
 				EF376C4F1AA12F1500832A0D /* main.m in Sources */,
 				EF376C8E1AA1C19200832A0D /* UiTextField+Geometry.m in Sources */,
-				EFA66EF31AA2333800553018 /* Todo.m in Sources */,
 				EF376C551AA12F1500832A0D /* projetesgi.xcdatamodeld in Sources */,
 				EF6E5F581AA7CE4700D811EC /* TaskDetailViewController.m in Sources */,
+				E2FE7F2F1AA89347008E7729 /* Todo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
