@@ -11,6 +11,7 @@
 #define PROJECT_CELL_ID        @"TaskCellIdentifier"
 #import "AppDelegate.h"
 #import "Project.h"
+
 #import "TodoListViewController.h"
 #define SEGUE_TO_TASK_ID  @"ListToEditTask"
 @interface TaskListViewController ()
@@ -39,10 +40,7 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
     
-    /*    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-     NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-     [request setSortDescriptors:sortDescriptors];*/
-    // Fetch the records and handle an error
+ 
     NSError *error;
     self.tasks = [[moc executeFetchRequest:request error:&error] mutableCopy];
     if (!self.tasks) {
@@ -66,9 +64,9 @@
     {
         
         TaskDetailViewController *controller = (TaskDetailViewController*)segue.destinationViewController;
-        controller.project = self.selectedProject;
+        controller.task = self.selectedProject;
         
-        NSLog(controller.project.nameP);
+        NSLog(controller.task.nameP);
     }
 }
 - (void)didReceiveMemoryWarning {

@@ -22,16 +22,10 @@
     [super viewDidLoad];
     self.dateFormatter = [NSDateFormatter new];
     self.dateFormatter.dateFormat = @"dd/MM/YYYY";
-    
-    
-    
-    
+ 
   
     [self setupFromModel];
-   
-   
-
-    
+  
      
 }
 

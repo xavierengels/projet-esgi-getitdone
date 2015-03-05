@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "Todo.h"
 @interface TaskListViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableTask;
 @property (strong, nonatomic) NSMutableArray *tasks;
 @property (weak, nonatomic) IBOutlet UITextField *fieldTask;
-
+@property (strong, nonatomic) Todo *projet;
 @end
