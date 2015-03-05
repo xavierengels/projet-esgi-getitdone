@@ -2,8 +2,8 @@
 /* Class = "IBUILabel"; text = "Done"; ObjectID = "A3P-R8-Nrr"; */
 "A3P-R8-Nrr.text" = "Done";
 
-/* Class = "IBUILabel"; text = "Choisir une tâche"; ObjectID = "BaE-zO-fV5"; */
-"BaE-zO-fV5.text" = "Choisir une tâche";
+/* Class = "IBUILabel"; text = "Choisir un projet"; ObjectID = "BaE-zO-fV5"; */
+"BaE-zO-fV5.text" = "Choisir un projet";
 
 /* Class = "IBUILabel"; text = "Detail"; ObjectID = "Btb-qd-WVl"; */
 "Btb-qd-WVl.text" = "Detail";

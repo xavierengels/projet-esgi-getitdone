@@ -193,7 +193,7 @@
         [self.todos removeObjectAtIndex:indexPath.row];
         
         [tableView reloadData]; // tell table to refresh now
-        
+      
     }
 }
 #pragma mark - UITableView Delegate

@@ -15,5 +15,4 @@
 @dynamic identifierP;
 @dynamic nameP;
 @dynamic relationship;
-
 @end

@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *fieldName;
 @property (weak, nonatomic) IBOutlet UITextView *txtDetails;
 @property (weak, nonatomic) IBOutlet UIDatePicker *dpDueDate;
-@property (weak, nonatomic) IBOutlet UITextField *textSelect;
+
 
 @property (strong, nonatomic) Project *selectedProject;
 - (void)setupFromModel;
@@ -27,29 +27,9 @@
     self.dateFormatter = [NSDateFormatter new];
     self.dateFormatter.dateFormat = @"dd/MM/YYYY";
     [self setupFromModel];
-    self.textSelect.delegate = self;
+
     
-    // Connect data
-  
-    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = ad.managedObjectContext;
-    
-  
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Project"];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Project" inManagedObjectContext:moc];
-    request.resultType = NSDictionaryResultType;
-    request.propertiesToFetch = [NSArray arrayWithObject:[[entity propertiesByName] objectForKey:@"nameP"]];
-    request.returnsDistinctResults = YES;
-    
-    _usernames = [moc executeFetchRequest:request error:nil];
-    
-  //  NSLog (@"names: %@",_usernames);
- 
- 
-    self.picker.dataSource = self;
-    self.picker.delegate = self;
-  
+     
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,29 +82,6 @@
   
    
 }
--(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
-{
-    //One column
-    return 1;
-}
 
--(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
-{
-    //set number of rows
-    return _usernames.count;
-}
-
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    //set item per row
-   return _usernames[row][@"nameP"];
-}
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
-{
-
-   // NSLog(@"Selected Row %@", [self.usernames objectAtIndex:row]);
-    selectRow= row;
-
-}
 
 @end

@@ -49,6 +49,8 @@
         // Handle accordingly
         NSLog(@"Failed to load colors from disk");
     }
+   
+
 }
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -59,14 +61,14 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"SEGUE_TO_TASK_ID"])
+    /*if([[segue identifier] isEqualToString:@"SEGUE_TO_TASK_ID"])
     {
         TodoListViewController *controller=(TodoListViewController *)segue.destinationViewController;
         
        
         controller.project = self.selectedProject;
         
-    }
+    }*/
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -126,6 +128,13 @@
   //  [self performSegueWithIdentifier:SEGUE_TO_PROJECT_ID sender:self.selectedProject];
     
 }
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    //One column
+    return 1;
+}
+
+
 /*
  #pragma mark - Navigation
  

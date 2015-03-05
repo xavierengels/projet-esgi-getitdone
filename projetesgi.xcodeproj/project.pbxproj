@@ -18,10 +18,10 @@
 		EF376C891AA1C08300832A0D /* TodoDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C881AA1C08300832A0D /* TodoDetailViewController.m */; };
 		EF376C8E1AA1C19200832A0D /* UiTextField+Geometry.m in Sources */ = {isa = PBXBuildFile; fileRef = EF376C8D1AA1C19200832A0D /* UiTextField+Geometry.m */; };
 		EF6E5F551AA7A9BF00D811EC /* TaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E5F541AA7A9BF00D811EC /* TaskListViewController.m */; };
+		EF6E5F581AA7CE4700D811EC /* TaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF6E5F571AA7CE4700D811EC /* TaskDetailViewController.m */; };
 		EFA66EE71AA1EBE600553018 /* ProjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EE61AA1EBE600553018 /* ProjectViewController.m */; };
 		EFA66EF31AA2333800553018 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF21AA2333800553018 /* Todo.m */; };
 		EFA66EF61AA2335800553018 /* Project.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA66EF51AA2335800553018 /* Project.m */; };
-		EFED563E1AA299410093E667 /* ProjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFED563D1AA299410093E667 /* ProjectDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,14 +56,14 @@
 		EF376C8D1AA1C19200832A0D /* UiTextField+Geometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UiTextField+Geometry.m"; sourceTree = "<group>"; };
 		EF6E5F531AA7A9BF00D811EC /* TaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListViewController.h; sourceTree = "<group>"; };
 		EF6E5F541AA7A9BF00D811EC /* TaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListViewController.m; sourceTree = "<group>"; };
+		EF6E5F561AA7CE4700D811EC /* TaskDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskDetailViewController.h; sourceTree = "<group>"; };
+		EF6E5F571AA7CE4700D811EC /* TaskDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewController.m; sourceTree = "<group>"; };
 		EFA66EE51AA1EBE600553018 /* ProjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectViewController.h; sourceTree = "<group>"; };
 		EFA66EE61AA1EBE600553018 /* ProjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectViewController.m; sourceTree = "<group>"; };
 		EFA66EF11AA2333800553018 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
 		EFA66EF21AA2333800553018 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		EFA66EF41AA2335800553018 /* Project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Project.h; sourceTree = "<group>"; };
 		EFA66EF51AA2335800553018 /* Project.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Project.m; sourceTree = "<group>"; };
-		EFED563C1AA299410093E667 /* ProjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectDetailViewController.h; sourceTree = "<group>"; };
-		EFED563D1AA299410093E667 /* ProjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,10 +165,10 @@
 				EF376C881AA1C08300832A0D /* TodoDetailViewController.m */,
 				EFA66EE51AA1EBE600553018 /* ProjectViewController.h */,
 				EFA66EE61AA1EBE600553018 /* ProjectViewController.m */,
-				EFED563C1AA299410093E667 /* ProjectDetailViewController.h */,
-				EFED563D1AA299410093E667 /* ProjectDetailViewController.m */,
 				EF6E5F531AA7A9BF00D811EC /* TaskListViewController.h */,
 				EF6E5F541AA7A9BF00D811EC /* TaskListViewController.m */,
+				EF6E5F561AA7CE4700D811EC /* TaskDetailViewController.h */,
+				EF6E5F571AA7CE4700D811EC /* TaskDetailViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 				EF376C8E1AA1C19200832A0D /* UiTextField+Geometry.m in Sources */,
 				EFA66EF31AA2333800553018 /* Todo.m in Sources */,
 				EF376C551AA12F1500832A0D /* projetesgi.xcdatamodeld in Sources */,
-				EFED563E1AA299410093E667 /* ProjectDetailViewController.m in Sources */,
+				EF6E5F581AA7CE4700D811EC /* TaskDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

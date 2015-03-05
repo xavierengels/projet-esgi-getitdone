@@ -17,7 +17,7 @@
 @property (strong, nonatomic) Todo *todo;
 @property (strong, nonatomic) Project *project;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
-@property (weak, nonatomic) IBOutlet UIPickerView *picker;
+
 
 @property (nonatomic, strong) NSArray *usernames;
 
