@@ -30,15 +30,7 @@
     
     
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    // this is imporant - we set our input date format to match our input string
-    // if format doesn't match you'll get nil from your string, so be careful
-    [dateFormatter setDateFormat:@"dd/MM/yyyy"];
-    NSDate *dateFromString = [[NSDate alloc] init];
-    // voila!
-    dateFromString = [dateFormatter dateFromString:self.todo.dueDate];
-    
-    self.dateFormatter = dateFromString;
+  
     [self setupFromModel];
    
    
