@@ -46,7 +46,7 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"identifierP like %@", _project.name];
     [request setPredicate:predicate];
     self.projects = [[moc executeFetchRequest:request error:&error] mutableCopy];
-    NSLog(@"HAKJHFJAZHFJKAZHFJKHAZJKHFAKZFA");
+
     NSLog(@"%@",_project.name);
 //faire avec predicate avec project.name
     
