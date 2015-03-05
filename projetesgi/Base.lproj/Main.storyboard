@@ -318,9 +318,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="fel-Im-WwD" kind="push" identifier="ListToEditTask" id="KzM-up-TRj"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -346,6 +343,7 @@
                     <connections>
                         <outlet property="fieldTask" destination="H3I-Aw-Fou" id="pXx-AU-pnu"/>
                         <outlet property="tableTask" destination="JYt-FL-GtA" id="W3H-8n-oKJ"/>
+                        <segue destination="fel-Im-WwD" kind="push" identifier="ListToEditTask" id="Lzn-BZ-RWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DoE-zs-BJd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sxc-D2-pwZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-259" y="-977"/>
+            <point key="canvasLocation" x="-299" y="-927"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

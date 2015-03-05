@@ -3,11 +3,7 @@
 #import "UITextField+Geometry.h"
 #import "Project.h"
 @interface TodoDetailViewController ()
-{
-    NSArray *_pickerData;
-    NSMutableArray *array1;
-    NSUInteger *selectRow;
-}
+
 @property (weak, nonatomic) IBOutlet UISwitch *switchDone;
 @property (weak, nonatomic) IBOutlet UITextField *fieldName;
 @property (weak, nonatomic) IBOutlet UITextView *txtDetails;

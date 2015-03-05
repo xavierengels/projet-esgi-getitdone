@@ -44,12 +44,13 @@
         // Something's gone seriously wrong
         NSLog(@"Error saving new color: %@", [error localizedDescription]);
     }
-     NSLog (@"names: %@",_usernames);
+    // NSLog (@"names: %@",_usernames);
     
 
     self.picker.dataSource = self;
     self.picker.delegate = self;
-    [_picker selectRow:selectRow inComponent:0 animated:NO];
+    // NSLog(intRow);
+   // [_picker selectRow:intRow inComponent:0 animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,13 +80,13 @@
 - (void)setupFromModel{
     
     self.fieldName.text  = self.project.nameP;
-   // selectRow = self.project.identifierP;
-
+    selectRow = self.project.identifierP;
+    NSLog(self.project.identifierP);
 }
 
 - (void)updateModelFromOutlets{
     self.project.nameP = self.fieldName.text;
-//    self.project.identifierP = selectRow;
+  self.project.identifierP = selectRow;
     
 }
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
