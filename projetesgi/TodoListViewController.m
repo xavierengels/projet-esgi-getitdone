@@ -143,6 +143,7 @@
         NSIndexPath *indexPath = [self.tableTodos indexPathForCell:cell];
        NSLog(@"show detail for item at row %ld", (long)indexPath.row);
         self.selectedTodo = self.todos[indexPath.row];
+
     }
 }
 
@@ -168,6 +169,7 @@
     cell.textLabel.text = currentTodo.name;
     cell.backgroundColor = (currentTodo.done)? [UIColor greenColor] : [UIColor lightGrayColor];
     cell.detailTextLabel.text = currentTodo.dueDate;
+    
     return cell;
  
 }
