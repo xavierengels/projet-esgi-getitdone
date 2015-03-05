@@ -16,6 +16,6 @@
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 
 
-@property (nonatomic, strong) NSArray *usernames;
+
 
 @end

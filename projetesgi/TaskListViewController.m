@@ -62,12 +62,12 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([[segue identifier] isEqualToString:@"SEGUE_TO_TASK_ID"])
+    if([[segue identifier] isEqualToString:SEGUE_TO_TASK_ID])
     {
         
         TaskDetailViewController *controller = segue.destinationViewController;
         controller.project = self.selectedProject;
-        
+        // NSLog(controller.project);
     }
 }
 - (void)didReceiveMemoryWarning {
@@ -120,7 +120,8 @@
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.selectedProject = self.tasks[indexPath.row];
-    [self performSegueWithIdentifier:SEGUE_TO_TASK_ID sender:self.selectedProject];
+   
+//    [self performSegueWithIdentifier:SEGUE_TO_TASK_ID sender:self.selectedProject];
     
 }
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
