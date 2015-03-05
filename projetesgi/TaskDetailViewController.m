@@ -50,6 +50,8 @@
     self.picker.dataSource = self;
     self.picker.delegate = self;
     //[_picker selectRow:intRow inComponent:0 animated:NO];
+    if(selectRow==nil)
+        selectRow=_usernames[0][@"name"];;
 }
 
 - (void)didReceiveMemoryWarning {
