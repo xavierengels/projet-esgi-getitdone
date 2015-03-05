@@ -30,6 +30,7 @@
     self.tableTodos.dataSource = self;
     
     self.dateFormatter = [NSDateFormatter new];
+
     self.dateFormatter.dateFormat = @"dd/MM/YYYY";
 }
 
@@ -111,7 +112,8 @@
    
     newTodo.name = self.fieldTodo.text;
     newTodo.dueDate = [self.dateFormatter stringFromDate:[NSDate date]];
-    newTodo.done = false;
+    newTodo.pourcentage = @"0%";
+   // newTodo.done = false;
     NSError *error;
     if (![moc save:&error]) {
         // Something's gone seriously wrong
@@ -119,6 +121,7 @@
     }
     [self.todos addObject:newTodo];
     [self.fieldTodo setText:@""];
+    [self.percent.text setText:@"0%"];
     [moc save:nil];
     [self.tableTodos reloadData];
 }
@@ -171,7 +174,7 @@
   
     Todo *currentTodo = self.todos[indexPath.row];
     cell.textLabel.text = currentTodo.name;
-    cell.backgroundColor = (currentTodo.done)? [UIColor greenColor] : [UIColor lightGrayColor];
+ //   cell.backgroundColor = (currentTodo.done)? [UIColor greenColor] : [UIColor lightGrayColor];
     cell.detailTextLabel.text = currentTodo.dueDate;
     
     return cell;

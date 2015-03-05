@@ -9,6 +9,8 @@
     NSManagedObjectContext *context;
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *percent;
+
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tableTodos;

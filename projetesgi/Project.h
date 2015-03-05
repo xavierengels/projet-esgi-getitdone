@@ -2,7 +2,7 @@
 //  Project.h
 //  projetesgi
 //
-//  Created by xavier engels on 28/02/2015.
+//  Created by xavier engels on 05/03/2015.
 //  Copyright (c) 2015 xavier engels. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * identifierP;
 @property (nonatomic, retain) NSString * nameP;
+@property (nonatomic, retain) NSNumber * doneP;
 @property (nonatomic, retain) NSSet *relationship;
 @end
 

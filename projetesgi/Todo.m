@@ -2,7 +2,7 @@
 //  Todo.m
 //  projetesgi
 //
-//  Created by Lionel on 05/03/2015.
+//  Created by xavier engels on 05/03/2015.
 //  Copyright (c) 2015 xavier engels. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 @implementation Todo
 
 @dynamic details;
-@dynamic done;
 @dynamic dueDate;
 @dynamic identifier;
 @dynamic name;
+@dynamic pourcentage;
 @dynamic relationship;
 
 @end

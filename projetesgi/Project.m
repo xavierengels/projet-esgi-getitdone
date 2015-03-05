@@ -2,7 +2,7 @@
 //  Project.m
 //  projetesgi
 //
-//  Created by xavier engels on 28/02/2015.
+//  Created by xavier engels on 05/03/2015.
 //  Copyright (c) 2015 xavier engels. All rights reserved.
 //
 
@@ -14,5 +14,7 @@
 
 @dynamic identifierP;
 @dynamic nameP;
+@dynamic doneP;
 @dynamic relationship;
+
 @end
