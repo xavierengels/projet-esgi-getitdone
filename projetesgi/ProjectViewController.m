@@ -42,7 +42,7 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"identifierP == %@", _project.name];
     [request setPredicate:predicate];
     self.projects = [[moc executeFetchRequest:request error:&error] mutableCopy];
-    NSLog(@"HAKJHFJAZHFJKAZHFJKHAZJKHFAKZFA");
+
     NSLog(@"%@",_project.name);
 
   //  NSLog(@"%@",[[self.projects objectAtIndex:0]valueForKey:@"_project.name"]);
