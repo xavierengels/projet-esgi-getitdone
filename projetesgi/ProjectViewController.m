@@ -43,7 +43,7 @@
      [request setSortDescriptors:sortDescriptors];*/
     // Fetch the records and handle an error
     NSError *error;
-    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"identifierP like %@", _project.name];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"identifierP == %@", _project.name];
     [request setPredicate:predicate];
     self.projects = [[moc executeFetchRequest:request error:&error] mutableCopy];
 
