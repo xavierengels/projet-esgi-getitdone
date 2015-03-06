@@ -96,7 +96,7 @@
                     <navigationItem key="navigationItem" id="rik-mL-u6x">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="zOK-Xe-NOn">
-                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ajouter un projet" minimumFontSize="17" id="m9T-8p-Ege">
+                            <textField key="customView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom Projet" minimumFontSize="17" id="m9T-8p-Ege">
                                 <rect key="frame" x="90.5" y="7" width="139.5" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>

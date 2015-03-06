@@ -3,6 +3,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "Project.h"
+#import "Todo.h"
 @interface TodoListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
     AppDelegate *app;
