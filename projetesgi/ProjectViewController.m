@@ -126,6 +126,45 @@
  
  
 }
+
+
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return YES;
+    
+}
+
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        //remove the deleted object from your data source.
+        
+        //If your data source is an NSMutableArray, do this
+        
+        NSError * error = nil;
+        [self.projects removeObjectAtIndex:indexPath.row];
+        NSManagedObjectContext *moc = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Project" inManagedObjectContext:moc];
+        NSFetchRequest *request = [[NSFetchRequest alloc] init];
+        [request setEntity:entity];
+        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"nameP" ascending:NO];
+        
+        [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+        
+        [request setFetchBatchSize:20];
+        NSManagedObject *matches = nil;
+        NSArray *objects = [moc executeFetchRequest:request error:&error];
+        matches=[objects objectAtIndex:([indexPath row])];
+       
+        [moc deleteObject:matches];
+        [moc save:&error];
+        [tableView reloadData];
+        
+    }
+}
 /*
  #pragma mark - Navigation
  

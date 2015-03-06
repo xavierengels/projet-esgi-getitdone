@@ -5,6 +5,7 @@
 #import "ProjectViewController.h"
 
 
+
 #define TODO_CELL_ID        @"TodoCellIdentifier"
 #define SEGUE_TO_DETAIL_ID  @"ListToDetail"
 #define SEGUE_TO_PROJECT_ID  @"ListToProject"
@@ -54,6 +55,9 @@
         // Handle accordingly
         NSLog(@"Failed to load colors from disk");
     }
+    
+    
+  
     
 /*
     // retrieve the store URL
@@ -107,7 +111,9 @@
 
     
     Todo *newTodo = [NSEntityDescription insertNewObjectForEntityForName:@"Todo" inManagedObjectContext:moc];
-   
+    
+    
+    
     newTodo.name = self.fieldTodo.text;
     newTodo.dueDate = [self.dateFormatter stringFromDate:[NSDate date]];
     newTodo.pourcentage = @"0%";
