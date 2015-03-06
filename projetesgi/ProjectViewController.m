@@ -8,10 +8,12 @@
 
 #import "ProjectViewController.h"
 #define PROJECT_CELL_ID        @"ProjectCellIdentifier"
+#define SEGUE_TO_TASK_ID     @"editToTaskTwo"
 #import "AppDelegate.h"
 #import "Project.h"
 #import "Todo.h"
 #import "TodoListViewController.h"
+#import "TaskDetailViewController.h"
 @interface ProjectViewController ()
 @property (strong, nonatomic) Project *selectedProject;
 @end
@@ -42,7 +44,7 @@
     NSPredicate *predicate = [NSPredicate predicateWithFormat: @"identifierP == %@", _project.name];
     [request setPredicate:predicate];
     self.projects = [[moc executeFetchRequest:request error:&error] mutableCopy];
-
+    
     NSLog(@"%@",_project.name);
 
   //  NSLog(@"%@",[[self.projects objectAtIndex:0]valueForKey:@"_project.name"]);
@@ -61,13 +63,13 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-   /* if([[segue identifier] isEqualToString:@"SEGUE_TO_PROJECT_ID"])
-    {
-        TodoListViewController *controller=(TodoListViewController *)segue.destinationViewController;
+    if([[segue identifier] isEqualToString:SEGUE_TO_TASK_ID])
+    { NSLog(@"test");
+        TaskDetailViewController *controller=(TaskDetailViewController *)segue.destinationViewController;
      
         //Or rather just save the indexPath in a property in your currentViewController when you get the accessoryButtonTappedForRowAtIndexPath callback, and use it here
-        controller.project = self.selectedProject;
-    }*/
+        controller.task = self.selectedProject;
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -118,12 +120,10 @@
 }
 #pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-      UITableViewCell *cell = [self.tableProject dequeueReusableCellWithIdentifier:PROJECT_CELL_ID];
-    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    NSManagedObjectContext *moc = ad.managedObjectContext;
+    
   
     self.selectedProject = self.projects[indexPath.row];
- 
+      [self performSegueWithIdentifier:SEGUE_TO_TASK_ID sender:self];
  
 }
 

@@ -14,4 +14,5 @@
 @property (strong, nonatomic) NSMutableArray *tasks;
 @property (weak, nonatomic) IBOutlet UITextField *fieldTask;
 @property (strong, nonatomic) Todo *projet;
+@property (strong, nonatomic) Project *task;
 @end

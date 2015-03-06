@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fsb-K5-Gw2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="fsb-K5-Gw2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -123,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egY-IW-xtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-186" y="621"/>
+            <point key="canvasLocation" x="-166" y="547"/>
         </scene>
         <!--Todo Detail View Controller-->
         <scene sceneID="De0-XA-g34">
@@ -284,6 +284,7 @@
                     <connections>
                         <outlet property="fieldProject" destination="o6m-Jx-Xry" id="7Lt-ke-ck7"/>
                         <outlet property="tableProject" destination="lyc-Oq-wZx" id="S7f-QI-42a"/>
+                        <segue destination="fel-Im-WwD" kind="push" identifier="editToTaskTwo" id="CET-Po-KVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcL-q0-jIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -444,5 +445,8 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="CET-Po-KVz"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
 </document>

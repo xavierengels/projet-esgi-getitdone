@@ -3,7 +3,6 @@
 #import "TodoListViewController.h"
 #import "TodoDetailViewController.h"
 #import "ProjectViewController.h"
-#import "Todo.h"
 
 
 #define TODO_CELL_ID        @"TodoCellIdentifier"
@@ -11,6 +10,8 @@
 #define SEGUE_TO_PROJECT_ID  @"ListToProject"
 
 @interface TodoListViewController ()
+
+
 @property (strong, nonatomic) Todo *selectedTodo;
 @property (strong, nonatomic) Todo *editTodo;
 //@property (strong, nonatomic) Project *ToProject;
@@ -31,6 +32,7 @@
     self.tableTodos.dataSource = self;
     
     self.dateFormatter = [NSDateFormatter new];
+
     self.dateFormatter.dateFormat = @"dd/MM/YYYY";
 }
 
@@ -44,11 +46,7 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Todo" inManagedObjectContext:moc];
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     [request setEntity:entity];
-    
-   /*    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    [request setSortDescriptors:sortDescriptors];*/
-    // Fetch the records and handle an error
+
    NSError *error;
     self.todos = [[moc executeFetchRequest:request error:&error] mutableCopy];
     if (!self.todos) {
@@ -117,7 +115,8 @@
     
     newTodo.name = self.fieldTodo.text;
     newTodo.dueDate = [self.dateFormatter stringFromDate:[NSDate date]];
-    newTodo.done = false;
+    newTodo.pourcentage = @"0%";
+   // newTodo.done = false;
     NSError *error;
     if (![moc save:&error]) {
         // Something's gone seriously wrong
@@ -125,6 +124,7 @@
     }
     [self.todos addObject:newTodo];
     [self.fieldTodo setText:@""];
+    //[self.percent.text setText:@"0%"];
     [moc save:nil];
     [self.tableTodos reloadData];
 }
@@ -177,7 +177,8 @@
   
     Todo *currentTodo = self.todos[indexPath.row];
     cell.textLabel.text = currentTodo.name;
-    cell.backgroundColor = (currentTodo.done)? [UIColor greenColor] : [UIColor lightGrayColor];
+ 
+ //   cell.backgroundColor = (currentTodo.done)? [UIColor greenColor] : [UIColor lightGrayColor];
     cell.detailTextLabel.text = currentTodo.dueDate;
     
     return cell;
@@ -213,9 +214,10 @@
         [request setSortDescriptors:[NSArray arrayWithObject:sort]];
         
         [request setFetchBatchSize:20];
-        NSManagedObject *matches = nil;
-        NSArray *objects = [moc executeFetchRequest:request error:&error];
+         NSManagedObject *matches = nil;
+         NSArray *objects = [moc executeFetchRequest:request error:&error];
         matches=[objects objectAtIndex:([indexPath row])];
+        NSLog(@"Deleting (%@)", matches);
         [moc deleteObject:matches];
         [moc save:&error];
         [tableView reloadData];

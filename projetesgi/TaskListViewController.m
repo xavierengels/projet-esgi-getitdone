@@ -162,7 +162,7 @@
         NSManagedObject *matches = nil;
         NSArray *objects = [moc executeFetchRequest:request error:&error];
         matches=[objects objectAtIndex:([indexPath row])];
-        
+        NSLog(@"Value delete%@",matches);
         [moc deleteObject:matches];
         [moc save:&error];
         [tableView reloadData];

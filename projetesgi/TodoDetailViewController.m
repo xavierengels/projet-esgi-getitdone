@@ -62,7 +62,7 @@
 #pragma mark - Privates
 - (void)setupFromModel{
 
-    self.switchDone.on   = self.todo.done;
+   // self.switchDone.on   = self.todo.done;
     self.fieldName.text  = self.todo.name;
     self.txtDetails.Text = self.todo.details;
     
@@ -79,7 +79,7 @@
     self.todo.name = self.fieldName.text;
     self.todo.details = self.txtDetails.text;
     self.todo.dueDate = [self.dateFormatter stringFromDate:self.dpDueDate.date];
-
+   // self.toto.pourcentage =
     
     
     NSLog(@"La valeur nouvelle %@",self.dpDueDate.date);
