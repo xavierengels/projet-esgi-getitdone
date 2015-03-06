@@ -5,7 +5,6 @@
 #import "ProjectViewController.h"
 
 
-
 #define TODO_CELL_ID        @"TodoCellIdentifier"
 #define SEGUE_TO_DETAIL_ID  @"ListToDetail"
 #define SEGUE_TO_PROJECT_ID  @"ListToProject"
@@ -203,6 +202,7 @@
         //remove the deleted object from your data source.
         
         //If your data source is an NSMutableArray, do this
+        
         NSError * error = nil;
         [self.todos removeObjectAtIndex:indexPath.row];
         NSManagedObjectContext *moc = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
@@ -210,7 +210,9 @@
         NSFetchRequest *request = [[NSFetchRequest alloc] init];
         [request setEntity:entity];
         NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+        
         [request setSortDescriptors:[NSArray arrayWithObject:sort]];
+        
         [request setFetchBatchSize:20];
          NSManagedObject *matches = nil;
          NSArray *objects = [moc executeFetchRequest:request error:&error];
